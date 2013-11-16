@@ -221,6 +221,7 @@
             this.Controls.Add(this.lblLName);
             this.Controls.Add(this.txtbFirstNames);
             this.Controls.Add(this.lblFName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmNewUserGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New User";

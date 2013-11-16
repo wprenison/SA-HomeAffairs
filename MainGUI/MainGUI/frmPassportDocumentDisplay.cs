@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace MainGUI
 {
-    public partial class PassportDocumentDisplay : Form
+    public partial class frmPassportDocumentDisplay : Form
     {
         PrintDocument printDoc = new PrintDocument();
 
-        public PassportDocumentDisplay()
+        public frmPassportDocumentDisplay()
         {
             printDoc.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace MainGUI
 
         Bitmap memoryImage;
 
+        //Captures the form area to a bitmap image to be printed
         private void CaptureScreen()
         {
             Graphics myGraphics = this.CreateGraphics();

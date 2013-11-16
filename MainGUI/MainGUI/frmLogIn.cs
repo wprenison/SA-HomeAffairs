@@ -29,6 +29,7 @@ namespace MainGUI
             
         }
 
+        //Searches file for username and password, if they exist send the user to the main form
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             bool verifiedUsernameAndPass = false;
@@ -72,8 +73,7 @@ namespace MainGUI
             {
                 MessageBox.Show("An IO Exception has occured: " + ioe.Message);
             }           
-            
-            
+
         }
 
         public string getLogedInUser()

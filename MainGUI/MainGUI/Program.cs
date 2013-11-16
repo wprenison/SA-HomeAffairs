@@ -19,12 +19,10 @@ namespace MainGUI
             frmLogIn frmLogIn = new frmLogIn();
 
             if (frmLogIn.ShowDialog() == DialogResult.OK)*/
-                Application.Run(new MainGUI());
+                Application.Run(new frmHomeAffiarsMainGUI());
             //else
               //  Application.Exit();
 
-                
-            
         }
     }
 }

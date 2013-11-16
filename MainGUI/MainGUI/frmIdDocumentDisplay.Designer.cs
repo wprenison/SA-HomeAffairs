@@ -1,6 +1,6 @@
 ﻿namespace MainGUI
 {
-    partial class IdDocumentDisplay
+    partial class frmIdDocumentDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IdDocumentDisplay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIdDocumentDisplay));
             this.txtbDisplayIdNo = new System.Windows.Forms.TextBox();
             this.txtbDisplayCitizenship = new System.Windows.Forms.TextBox();
             this.txtbDisplaySurname = new System.Windows.Forms.TextBox();
@@ -128,7 +128,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // IdDocumentDisplay
+            // frmIdDocumentDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +143,8 @@
             this.Controls.Add(this.txtbDisplaySurname);
             this.Controls.Add(this.txtbDisplayCitizenship);
             this.Controls.Add(this.txtbDisplayIdNo);
-            this.Name = "IdDocumentDisplay";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmIdDocumentDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ID Document Display";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

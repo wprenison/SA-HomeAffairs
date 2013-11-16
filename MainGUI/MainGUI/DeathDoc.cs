@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MainGUI
 {
-    class DeathUser : PassUser
+    class DeathDoc : PassDoc
     {
 
         private const string FILE_DATA_SPLITTER = ":";
@@ -24,7 +24,7 @@ namespace MainGUI
         private string resLine2;
         private string resLine3;
 
-        public DeathUser(string[] userDetails, string[] IDDetails, bool newId, string[] passDetails, bool newPass, string[] deathDetails)
+        public DeathDoc(string[] userDetails, string[] IDDetails, bool newId, string[] passDetails, bool newPass, string[] deathDetails)
             :base(userDetails, IDDetails, newId, passDetails, newPass)
         {
             deadIdNo = deathDetails[2];
@@ -42,7 +42,7 @@ namespace MainGUI
 
         }
 
-        public DeathUser(string[] userDetails, string[] IDDetails, bool newId, string[] deathDetails)
+        public DeathDoc(string[] userDetails, string[] IDDetails, bool newId, string[] deathDetails)
             : base(userDetails, IDDetails, newId)
         {
             deadIdNo = deathDetails[1];
@@ -66,9 +66,10 @@ namespace MainGUI
 
         }
 
+        //Displays death certificate
         public override void display()
         {
-            DeathCertDisplay deathCertDisplay = new DeathCertDisplay();
+            frmDeathCertDisplay deathCertDisplay = new frmDeathCertDisplay();
 
             deathCertDisplay.txtbDesceasedIdNoDisplay.Text = DeadIdNumber;
             deathCertDisplay.txtbDesceasedFirstNamesDisplay.Text = DeadFirstNames;
@@ -83,7 +84,6 @@ namespace MainGUI
             deathCertDisplay.Show();
 
         }
-
 
          public string DeadIdNumber
         {
@@ -139,8 +139,6 @@ namespace MainGUI
             set { causeOfDeath = value; }
         }
 
- 
-
         public string ResLine1
         {
             get { return resLine1; }
@@ -158,8 +156,6 @@ namespace MainGUI
             get { return resLine3; }
             set { resLine3 = value; }
         }
-
-
 
     }
 }

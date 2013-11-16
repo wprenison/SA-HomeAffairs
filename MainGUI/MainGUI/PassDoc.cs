@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MainGUI
 {
-    class PassUser : IDUser
+    class PassDoc : IDDoc
     {
         private const string FILE_DATA_SPLITTER = ":";
         private const string FILE_DIRECTORY_PASSUSER = "PassUsers.txt";
@@ -24,7 +24,8 @@ namespace MainGUI
         private string dateOfIssue;
         private string expiryDate;
 
-        public PassUser(string[] userDetails, string[] IDDetails, bool newId, string[] passDetails, bool newPass)
+        //Constructor, the newPass param det if the user has a passport already or if they need a new one
+        public PassDoc(string[] userDetails, string[] IDDetails, bool newId, string[] passDetails, bool newPass)
             :base(userDetails, IDDetails, newId)
         {
             if (newPass)
@@ -55,10 +56,9 @@ namespace MainGUI
                 expiryDate = passDetails[13];
             }
 
-            
         }
 
-        public PassUser(string[] userDetails, string[] IDDetails, bool newId)
+        public PassDoc(string[] userDetails, string[] IDDetails, bool newId)
             : base(userDetails, IDDetails, newId)
         {
 
@@ -100,11 +100,10 @@ namespace MainGUI
             generatePassNumber();
             generateDates();
             writeUser();
-           
 
         }
 
-
+        //Writes the new passport to file
         override public void writeUser()
         {
             try
@@ -130,9 +129,10 @@ namespace MainGUI
             }
         }
 
+        //Displays passport
         override public void display()
         {
-            PassportDocumentDisplay passDocDisplay = new PassportDocumentDisplay();
+            frmPassportDocumentDisplay passDocDisplay = new frmPassportDocumentDisplay();
 
             passDocDisplay.txtbPassDisplayName.Text = FirstName;
             passDocDisplay.txtbPassDisplayName2.Text = FirstName;

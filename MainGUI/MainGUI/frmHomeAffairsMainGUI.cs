@@ -10,22 +10,20 @@ using System.IO;
 
 namespace MainGUI
 {
-    public partial class MainGUI : Form
+    public partial class frmHomeAffiarsMainGUI : Form
     {
         private string CURRENT_USER;
         private const char FILE_DATA_SPLITTER = ':';
         private const string FILE_DIRECTORY_USER = "Users.txt";
         private const string FILE_DIRECTORY_IDUSER = "IDUsers.txt";
         private const string FILE_DIRECTORY_PASSUSER = "PASSUsers.txt";
-      
 
-        public MainGUI()
+        public frmHomeAffiarsMainGUI()
         {
             InitializeComponent();
             this.Hide();
             pnlPartnerDetails.Hide();
 
-           
         }
 
         private void MainGUI_Load(object sender, EventArgs e)
@@ -33,7 +31,7 @@ namespace MainGUI
             this.Hide();
             frmLogIn logInFrm = new frmLogIn();
             DialogResult logInResult = logInFrm.ShowDialog();
-            CURRENT_USER = logInFrm.getLogedInUser();                    
+            CURRENT_USER = logInFrm.getLogedInUser();
 
             //Used to terminate the application if the login form is closed by the user.
             if (logInResult == DialogResult.Cancel)
@@ -41,15 +39,12 @@ namespace MainGUI
 
             MessageBox.Show("Welcome " + CURRENT_USER);
 
-
-
             //dissables all tabs except id tab
             ((Control)this.tpgPassport).Enabled = false;
             ((Control)this.tpgDeathCert).Enabled = false;
 
             pnlTandCs.Hide();
-            
-            
+
             //finds if the user has already an id number then allows access to specific tabs if so
             controlTabAccess();
 
@@ -66,10 +61,8 @@ namespace MainGUI
                 txtbPostalLine3.Text = passUserDetails[7];
             }
 
-            
         }
 
-        
         private string[] searchUser(string currentUser, string FILE_DIRECTORY_TO_SEARCH)
         {
             string[] userDetails = null;
@@ -79,7 +72,7 @@ namespace MainGUI
                 using (StreamReader reader = new StreamReader(FILE_DIRECTORY_TO_SEARCH))
                 {
                     string inValue;
-                    
+
                     while ((inValue = reader.ReadLine()) != null)
                     {
                         userDetails = inValue.Split(FILE_DATA_SPLITTER);
@@ -88,7 +81,7 @@ namespace MainGUI
                             break;
                         else
                             userDetails = null;
-                        
+
                     }
                 }
             }
@@ -111,12 +104,10 @@ namespace MainGUI
             else
                 pnlPartnerDetails.Hide();
         }
-             
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        {            
+        {
             ValidationCalculator validator = new ValidationCalculator(); //used to validate inputs
-
 
             //detrmines which tab is in use
             string selectedTabName = tctrlMenu.SelectedTab.Name;
@@ -128,7 +119,7 @@ namespace MainGUI
             else if (selectedTabName == "tpgPassport")
             {
                 handelPassSubmit(validator);
-            }            
+            }
             else if (selectedTabName == "tpgDeathCert")
             {
                 handelDeathSubmit(validator);
@@ -171,7 +162,7 @@ namespace MainGUI
                 txtbCountryOfBirth.Clear();
                 txtbPlaceOfBirth.Clear();
                 cbTandCs.Checked = false;
-                
+
             }
             else if (selectedTabName == "tpgDeathCert")
             {
@@ -239,7 +230,7 @@ namespace MainGUI
                 lblYouAlrdyHavPass.Visible = true;
 
                 ((Control)this.tpgPassport).Enabled = false;
-                
+
             }
 
         }
@@ -282,8 +273,6 @@ namespace MainGUI
                     allFieldsValidated = false;
                 }
 
-
-                
             }
             else
             {
@@ -298,13 +287,11 @@ namespace MainGUI
                 allFieldsValidated = false;
             }
 
-
             if (validator.valLettersAndSpace(fields) == false)
             {
                 MessageBox.Show("Invalid char dettected in maiden name");
                 allFieldsValidated = false;
             }
-
 
             //Validates that radio buttons are not empty
             RadioButton[] rabsNationality = { rabSouthAfrica, rabOther };
@@ -331,12 +318,11 @@ namespace MainGUI
                 allFieldsValidated = false;
             }
 
-
             //Generating an ID NO
             if (allFieldsValidated)
-            {   
-                //Writes IDUser Details after generating ID Number
-               
+            {
+                //Writes IDDoc Details after generating ID Number
+
                 string nationality = null;
                 char gender = ' ';
                 string married;
@@ -362,11 +348,10 @@ namespace MainGUI
                 string[] idUserDetails = { CURRENT_USER, txtbMaidenName.Text, nationality, gender + "", cmbRace.Text, married, txtbPartnerId.Text, txtbPartnerFirstName.Text,
                                                     txtbPartnerMaidenName.Text, txtbMarrageCity.Text, dtpPartnerDateOfBirth.Text };
 
-                //Generates actual ID Number and writes the ID User
-                IDUser idUser = new IDUser(userDetails, idUserDetails, true);
+                //Generates actual ID Number and writes the ID UserDoc
+                IDDoc idUser = new IDDoc(userDetails, idUserDetails, true);
                 idUser.generateID();
                 idUser.display();
-                   
 
                 //Checks if id exists and opens up other tabs if it does to avoid a relog
                 controlTabAccess();
@@ -410,8 +395,6 @@ namespace MainGUI
                     allFieldsValidated = false;
                 }
 
-                
-
                 //validates that only letters and spaces where used in appropriate fields
                 string[] passLettersAndSpacesFields = { txtbCountryOfBirth.Text, txtbPlaceOfBirth.Text };
 
@@ -421,28 +404,23 @@ namespace MainGUI
                     allFieldsValidated = false;
                 }
 
-                
                 //Generates passport only if all fields are valid
                 if (allFieldsValidated)
                 {
                     //stores all the extra details for a passport user in an array to be able to create a passUser obj
                     string[] passUserDetails = { txtbHomeTell.Text, txtbWorkTell.Text, txtbCell.Text, txtbEmail.Text,
                                                    txtbPostalLine1.Text, txtbPostalLine2.Text, txtbPostalLine3.Text, txtbCountryOfBirth.Text, txtbPlaceOfBirth.Text };
-                   
+
                     //Retrives user base info and id info
                     string[] userDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_USER);
                     string[] userIdDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_IDUSER);
 
-                    PassUser passUser = new PassUser(userDetails, userIdDetails, false, passUserDetails, false);
+                    PassDoc passUser = new PassDoc(userDetails, userIdDetails, false, passUserDetails, true);
 
                     passUser.generatePassport();
-                    passUser.display();                    
+                    passUser.display();
 
                 }
-
-
-
-
 
             }
             else
@@ -505,11 +483,10 @@ namespace MainGUI
                                                txtbNameOfUndertaker.Text, txtbCauseOfDeath.Text, txtbApplicantHomeTell.Text, txtbApplicantWorkTell.Text, txtbApplicantCell.Text, txtbApplicantPostalLine1.Text, txtbApplicantPostalLine2.Text, txtbApplicantPostalLine3.Text,
                                                txtbApplicantResidentialLine1.Text, txtbApplicantResidentialLine2.Text, txtbApplicantResidentialLine3.Text };
 
-
-                DeathUser deathUser = new DeathUser(userDetails, userIdDetails, false, userDeathDetails);
+                DeathDoc deathUser = new DeathDoc(userDetails, userIdDetails, false, userDeathDetails);
 
                 deathUser.display();
-                
+
             }
 
         }
@@ -522,9 +499,17 @@ namespace MainGUI
                 string[] userDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_USER);
                 string[] idUserDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_IDUSER);
 
-                IDUser reviewIdUser = new IDUser(userDetails, idUserDetails, false);
+                //Checks a doc exists before trying to display it
+                if (idUserDetails != null)
+                {
+                    IDDoc reviewIdUser = new IDDoc(userDetails, idUserDetails, false);
 
-                reviewIdUser.display();
+                    reviewIdUser.display();
+                }
+                else
+                {
+                    MessageBox.Show("You do not currently have an ID Document", "Error: ID Document does not exist");
+                }
             }
             else if (tctrlMenu.SelectedTab.Name == "tpgPassport")
             {
@@ -532,10 +517,18 @@ namespace MainGUI
                 string[] idUserDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_IDUSER);
                 string[] passUserDetails = searchUser(CURRENT_USER, FILE_DIRECTORY_PASSUSER);
 
-                PassUser reviewPassUser = new PassUser(userDetails, idUserDetails, false, passUserDetails, false);
+                //Checks a doc exists before trying to display it
+                if (passUserDetails != null)
+                {
+                    PassDoc reviewPassUser = new PassDoc(userDetails, idUserDetails, false, passUserDetails, false);
 
-                reviewPassUser.display();
-                                
+                    reviewPassUser.display();
+                }
+                else
+                {
+                    MessageBox.Show("You do not currently have a Passport Document", "Error: Passport Document does not exist");
+                }
+
             }
             else if (tctrlMenu.SelectedTab.Name == "tpgDeathCert")
             {
@@ -546,5 +539,3 @@ namespace MainGUI
 
     }
 }
-                
-        

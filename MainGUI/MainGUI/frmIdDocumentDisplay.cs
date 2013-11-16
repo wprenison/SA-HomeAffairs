@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace MainGUI
 {
-    public partial class IdDocumentDisplay : Form
+    public partial class frmIdDocumentDisplay : Form
     {
         PrintDocument printDoc = new PrintDocument();
 
-        public IdDocumentDisplay()
+        public frmIdDocumentDisplay()
         {
             printDoc.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             InitializeComponent();
@@ -25,14 +25,12 @@ namespace MainGUI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
 
             CaptureScreen();
             printDoc.Print();
             
         }
 
-        
         Bitmap memoryImage;
 
         private void CaptureScreen()

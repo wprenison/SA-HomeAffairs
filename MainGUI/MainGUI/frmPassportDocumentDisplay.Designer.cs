@@ -1,6 +1,6 @@
 ﻿namespace MainGUI
 {
-    partial class PassportDocumentDisplay
+    partial class frmPassportDocumentDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassportDocumentDisplay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPassportDocumentDisplay));
             this.txtbPassDisplayName = new System.Windows.Forms.TextBox();
             this.txtbPassDisplaySurname = new System.Windows.Forms.TextBox();
             this.txtbPassDisplayCitizenship = new System.Windows.Forms.TextBox();
@@ -159,7 +159,7 @@
             this.pbPassPrint.TabStop = false;
             this.pbPassPrint.Click += new System.EventHandler(this.pbPassPrint_Click);
             // 
-            // PassportDocumentDisplay
+            // frmPassportDocumentDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,9 @@
             this.Controls.Add(this.txtbPassDisplayCitizenship);
             this.Controls.Add(this.txtbPassDisplaySurname);
             this.Controls.Add(this.txtbPassDisplayName);
-            this.Name = "PassportDocumentDisplay";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmPassportDocumentDisplay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassportDocumentDisplay";
             ((System.ComponentModel.ISupportInitialize)(this.pbPassPrint)).EndInit();
             this.ResumeLayout(false);

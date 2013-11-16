@@ -85,8 +85,6 @@ namespace MainGUI
                     MessageBox.Show("An IO Exception has occured: " + ioe.Message);
                 }
 
-
-
             }
         }        
 

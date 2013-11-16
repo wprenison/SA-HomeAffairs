@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace MainGUI
 {
-    public partial class DeathCertDisplay : Form
+    public partial class frmDeathCertDisplay : Form
     {
         PrintDocument printDoc = new PrintDocument();
 
-        public DeathCertDisplay()
+        public frmDeathCertDisplay()
         {
             InitializeComponent();
 
