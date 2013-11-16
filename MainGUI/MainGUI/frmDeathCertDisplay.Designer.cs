@@ -1,6 +1,6 @@
 ﻿namespace MainGUI
 {
-    partial class DeathCertDisplay
+    partial class frmDeathCertDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeathCertDisplay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeathCertDisplay));
             this.lblCauseOfDeath = new System.Windows.Forms.Label();
             this.txtbCauseOfDeath = new System.Windows.Forms.TextBox();
             this.lblNameOfUndertakerDisplay = new System.Windows.Forms.Label();
@@ -270,7 +270,7 @@
             this.saveFileDialog1.DefaultExt = "bmp";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // DeathCertDisplay
+            // frmDeathCertDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,7 +298,9 @@
             this.Controls.Add(this.lblDesceasedIdNoDisplay);
             this.Controls.Add(this.lblParticularsOfDeceased);
             this.Controls.Add(this.pbLogo);
-            this.Name = "DeathCertDisplay";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmDeathCertDisplay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeathCertDisplay";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrint)).EndInit();

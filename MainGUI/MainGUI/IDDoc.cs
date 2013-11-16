@@ -7,7 +7,7 @@ using System.IO;
 
 namespace MainGUI
 {
-    class IDUser : User
+    class IDDoc : UserDoc
     {
         private const string FILE_DIRECTORY_IDUSER = "IDUsers.txt";
         private const string FILE_DATA_SPLITTER = ":";
@@ -23,7 +23,8 @@ namespace MainGUI
         private string partnerDateOfBirth;
         private string idNumber = null;
 
-        public IDUser(string userName, string password, string firstName, string lastName, string dateOfBirth, string addressLine1, string addressLine2, string addressLine3, string maidenName, bool nationality, char gender, string race, bool married, string partnerIdNo, string partnerNames, string partnerMaidenName, string marrageCity, string partnerDateOfBirth)
+        //Constructor with inheritance values being sent to parent class
+        public IDDoc(string userName, string password, string firstName, string lastName, string dateOfBirth, string addressLine1, string addressLine2, string addressLine3, string maidenName, bool nationality, char gender, string race, bool married, string partnerIdNo, string partnerNames, string partnerMaidenName, string marrageCity, string partnerDateOfBirth)
             : base(userName, password, firstName, lastName, dateOfBirth, addressLine1, addressLine2, addressLine3)
         {
             this.maidenName = maidenName;
@@ -37,8 +38,9 @@ namespace MainGUI
             this.marrageCity = marrageCity;
             this.partnerDateOfBirth = partnerDateOfBirth;
         }
-
-        public IDUser(string[] userDetails, string[] IDDetails, bool newId)
+         
+        //Same constructor as above, however using arrays and an extra param this param is to det if the user needs a new id or if they already have one
+        public IDDoc(string[] userDetails, string[] IDDetails, bool newId)
             : base(userDetails)
         {
             if (newId)
@@ -122,6 +124,7 @@ namespace MainGUI
             
         }
 
+        //This writes the users id detail to file
         public virtual void writeUser()
         {
             try
@@ -147,9 +150,10 @@ namespace MainGUI
             }
         }
 
+        //This displays the users id
         public virtual void display()
         {
-            IdDocumentDisplay display = new IdDocumentDisplay();
+            frmIdDocumentDisplay display = new frmIdDocumentDisplay();
 
             string citizenship;
 
@@ -286,7 +290,6 @@ namespace MainGUI
             get { return idNumber; }
             set { idNumber = value; }
         }
-
 
     }
 }

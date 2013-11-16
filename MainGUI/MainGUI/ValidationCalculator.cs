@@ -66,8 +66,6 @@ namespace MainGUI
                 if (checkDigit.Length > 1)
                     checkDigit = checkDigit.Substring(1, 1);
 
-                
-
                 //compares last didgit of id number to validate against the check digit calculated
                 if (IdNoToValidate.Substring(12, 1) == checkDigit)
                     validId = true;
@@ -82,6 +80,7 @@ namespace MainGUI
             return validId;
         }
 
+        //Validates if a combo box value has been selected
         public bool valComboBoxComplete(ComboBox[] cmbsToValidate)
         {
             bool optionSelectedForAllCmbs = true;
@@ -150,7 +149,6 @@ namespace MainGUI
 
             }
 
-
             return valLetterAndSpace;
         }
 
@@ -175,10 +173,8 @@ namespace MainGUI
 
             }
 
-
             return valDigitsOnly;
         }
-
 
         //validates that a password has at least one caps, one non caps, one special char and is >= 6 chars 
         public bool valPassword(string passwordToValidate)
@@ -215,11 +211,9 @@ namespace MainGUI
                     break;
                 }
             }
-            
 
             return validPassword;
         }
-
 
         //conactenates a bunch of strings in uppercase and returns a char array with each letter in an element
         public char[] concatUpperCase(string[] concatStrings)

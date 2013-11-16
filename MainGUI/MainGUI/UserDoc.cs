@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MainGUI
 {
-    class User
+    class UserDoc
     {
         private string userName;
         private string password;
@@ -16,7 +16,7 @@ namespace MainGUI
         private string addressLine2;
         private string addressLine3;
 
-        public User(string userName, string password, string firstName, string lastName, string dateOfBirth, string addressLine1, string addressLine2, string addressLine3)
+        public UserDoc(string userName, string password, string firstName, string lastName, string dateOfBirth, string addressLine1, string addressLine2, string addressLine3)
         {
 
             this.userName = userName;
@@ -29,7 +29,8 @@ namespace MainGUI
             this.addressLine3 = addressLine3;
         }
 
-        public User(string[] userDetails)
+        //Same constructor as above, but only using an array instead
+        public UserDoc(string[] userDetails)
         {
             userName = userDetails[0];
             password = userDetails[1];
@@ -86,7 +87,6 @@ namespace MainGUI
             get { return addressLine3; }
             set { addressLine3 = value; }
         }
-        
 
     }
 }

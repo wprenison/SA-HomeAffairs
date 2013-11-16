@@ -1,6 +1,6 @@
 ﻿namespace MainGUI
 {
-    partial class MainGUI
+    partial class frmHomeAffiarsMainGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomeAffiarsMainGUI));
             this.tctrlMenu = new System.Windows.Forms.TabControl();
             this.tpgIdDoc = new System.Windows.Forms.TabPage();
             this.lblAlredHaveId = new System.Windows.Forms.Label();
@@ -60,8 +60,34 @@
             this.cmbRace = new System.Windows.Forms.ComboBox();
             this.lblRace = new System.Windows.Forms.Label();
             this.tpgPassport = new System.Windows.Forms.TabPage();
+            this.pnlPassDetails = new System.Windows.Forms.Panel();
+            this.pnlTandCs = new System.Windows.Forms.Panel();
+            this.rtbTermAndConditions = new System.Windows.Forms.RichTextBox();
+            this.llblTandCs = new System.Windows.Forms.LinkLabel();
+            this.cbTandCs = new System.Windows.Forms.CheckBox();
+            this.txtbPlaceOfBirth = new System.Windows.Forms.TextBox();
+            this.lblPlaceOfBirth = new System.Windows.Forms.Label();
+            this.txtbCountryOfBirth = new System.Windows.Forms.TextBox();
+            this.lblCountryOfBirth = new System.Windows.Forms.Label();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtbPostalLine3 = new System.Windows.Forms.TextBox();
+            this.txtbPostalLine2 = new System.Windows.Forms.TextBox();
+            this.txtbPostalLine1 = new System.Windows.Forms.TextBox();
+            this.lblPostaAddress = new System.Windows.Forms.Label();
+            this.txtbCell = new System.Windows.Forms.TextBox();
+            this.lblCell = new System.Windows.Forms.Label();
+            this.txtbWorkTell = new System.Windows.Forms.TextBox();
+            this.lblWorkTell = new System.Windows.Forms.Label();
+            this.txtbHomeTell = new System.Windows.Forms.TextBox();
+            this.lblHomeTell = new System.Windows.Forms.Label();
+            this.lblIdNo = new System.Windows.Forms.Label();
+            this.txtbIdNo = new System.Windows.Forms.TextBox();
             this.lblNeedIdNo = new System.Windows.Forms.Label();
+            this.lblYouAlrdyHavPass = new System.Windows.Forms.Label();
             this.tpgDeathCert = new System.Windows.Forms.TabPage();
+            this.lblCauseOfDeath = new System.Windows.Forms.Label();
+            this.txtbCauseOfDeath = new System.Windows.Forms.TextBox();
             this.txtbApplicantResidentialLine3 = new System.Windows.Forms.TextBox();
             this.txtbApplicantResidentialLine2 = new System.Windows.Forms.TextBox();
             this.txtbApplicantResidentialLine1 = new System.Windows.Forms.TextBox();
@@ -97,35 +123,12 @@
             this.lblNeedIdNoDeath = new System.Windows.Forms.Label();
             this.mnuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemClear = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemSubmit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemViewDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnViewIdDoc = new System.Windows.Forms.Button();
-            this.lblYouAlrdyHavPass = new System.Windows.Forms.Label();
-            this.pnlPassDetails = new System.Windows.Forms.Panel();
-            this.pnlTandCs = new System.Windows.Forms.Panel();
-            this.rtbTermAndConditions = new System.Windows.Forms.RichTextBox();
-            this.llblTandCs = new System.Windows.Forms.LinkLabel();
-            this.cbTandCs = new System.Windows.Forms.CheckBox();
-            this.txtbPlaceOfBirth = new System.Windows.Forms.TextBox();
-            this.lblPlaceOfBirth = new System.Windows.Forms.Label();
-            this.txtbCountryOfBirth = new System.Windows.Forms.TextBox();
-            this.lblCountryOfBirth = new System.Windows.Forms.Label();
-            this.txtbEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtbPostalLine3 = new System.Windows.Forms.TextBox();
-            this.txtbPostalLine2 = new System.Windows.Forms.TextBox();
-            this.txtbPostalLine1 = new System.Windows.Forms.TextBox();
-            this.lblPostaAddress = new System.Windows.Forms.Label();
-            this.txtbCell = new System.Windows.Forms.TextBox();
-            this.lblCell = new System.Windows.Forms.Label();
-            this.txtbWorkTell = new System.Windows.Forms.TextBox();
-            this.lblWorkTell = new System.Windows.Forms.Label();
-            this.txtbHomeTell = new System.Windows.Forms.TextBox();
-            this.lblHomeTell = new System.Windows.Forms.Label();
-            this.lblIdNo = new System.Windows.Forms.Label();
-            this.txtbIdNo = new System.Windows.Forms.TextBox();
-            this.txtbCauseOfDeath = new System.Windows.Forms.TextBox();
-            this.lblCauseOfDeath = new System.Windows.Forms.Label();
             this.tctrlMenu.SuspendLayout();
             this.tpgIdDoc.SuspendLayout();
             this.pnlIdDetails.SuspendLayout();
@@ -133,10 +136,10 @@
             this.grbNationality.SuspendLayout();
             this.pnlPartnerDetails.SuspendLayout();
             this.tpgPassport.SuspendLayout();
-            this.tpgDeathCert.SuspendLayout();
-            this.mnuStripMainMenu.SuspendLayout();
             this.pnlPassDetails.SuspendLayout();
             this.pnlTandCs.SuspendLayout();
+            this.tpgDeathCert.SuspendLayout();
+            this.mnuStripMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tctrlMenu
@@ -458,6 +461,214 @@
             this.tpgPassport.TabIndex = 1;
             this.tpgPassport.Text = "Passport";
             // 
+            // pnlPassDetails
+            // 
+            this.pnlPassDetails.Controls.Add(this.pnlTandCs);
+            this.pnlPassDetails.Controls.Add(this.llblTandCs);
+            this.pnlPassDetails.Controls.Add(this.cbTandCs);
+            this.pnlPassDetails.Controls.Add(this.txtbPlaceOfBirth);
+            this.pnlPassDetails.Controls.Add(this.lblPlaceOfBirth);
+            this.pnlPassDetails.Controls.Add(this.txtbCountryOfBirth);
+            this.pnlPassDetails.Controls.Add(this.lblCountryOfBirth);
+            this.pnlPassDetails.Controls.Add(this.txtbEmail);
+            this.pnlPassDetails.Controls.Add(this.lblEmail);
+            this.pnlPassDetails.Controls.Add(this.txtbPostalLine3);
+            this.pnlPassDetails.Controls.Add(this.txtbPostalLine2);
+            this.pnlPassDetails.Controls.Add(this.txtbPostalLine1);
+            this.pnlPassDetails.Controls.Add(this.lblPostaAddress);
+            this.pnlPassDetails.Controls.Add(this.txtbCell);
+            this.pnlPassDetails.Controls.Add(this.lblCell);
+            this.pnlPassDetails.Controls.Add(this.txtbWorkTell);
+            this.pnlPassDetails.Controls.Add(this.lblWorkTell);
+            this.pnlPassDetails.Controls.Add(this.txtbHomeTell);
+            this.pnlPassDetails.Controls.Add(this.lblHomeTell);
+            this.pnlPassDetails.Controls.Add(this.lblIdNo);
+            this.pnlPassDetails.Controls.Add(this.txtbIdNo);
+            this.pnlPassDetails.Location = new System.Drawing.Point(0, 26);
+            this.pnlPassDetails.Name = "pnlPassDetails";
+            this.pnlPassDetails.Size = new System.Drawing.Size(523, 320);
+            this.pnlPassDetails.TabIndex = 39;
+            // 
+            // pnlTandCs
+            // 
+            this.pnlTandCs.Controls.Add(this.rtbTermAndConditions);
+            this.pnlTandCs.Location = new System.Drawing.Point(230, 108);
+            this.pnlTandCs.Name = "pnlTandCs";
+            this.pnlTandCs.Size = new System.Drawing.Size(285, 198);
+            this.pnlTandCs.TabIndex = 35;
+            // 
+            // rtbTermAndConditions
+            // 
+            this.rtbTermAndConditions.Enabled = false;
+            this.rtbTermAndConditions.Location = new System.Drawing.Point(4, 4);
+            this.rtbTermAndConditions.Name = "rtbTermAndConditions";
+            this.rtbTermAndConditions.Size = new System.Drawing.Size(278, 191);
+            this.rtbTermAndConditions.TabIndex = 0;
+            this.rtbTermAndConditions.Text = resources.GetString("rtbTermAndConditions.Text");
+            // 
+            // llblTandCs
+            // 
+            this.llblTandCs.AutoSize = true;
+            this.llblTandCs.Location = new System.Drawing.Point(342, 88);
+            this.llblTandCs.Name = "llblTandCs";
+            this.llblTandCs.Size = new System.Drawing.Size(109, 13);
+            this.llblTandCs.TabIndex = 33;
+            this.llblTandCs.TabStop = true;
+            this.llblTandCs.Text = "Terms and Conditions";
+            this.llblTandCs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblTandCs_LinkClicked);
+            // 
+            // cbTandCs
+            // 
+            this.cbTandCs.AutoSize = true;
+            this.cbTandCs.Location = new System.Drawing.Point(246, 84);
+            this.cbTandCs.Name = "cbTandCs";
+            this.cbTandCs.Size = new System.Drawing.Size(100, 17);
+            this.cbTandCs.TabIndex = 32;
+            this.cbTandCs.Text = "I agree to these";
+            this.cbTandCs.UseVisualStyleBackColor = true;
+            // 
+            // txtbPlaceOfBirth
+            // 
+            this.txtbPlaceOfBirth.Location = new System.Drawing.Point(323, 48);
+            this.txtbPlaceOfBirth.Name = "txtbPlaceOfBirth";
+            this.txtbPlaceOfBirth.Size = new System.Drawing.Size(129, 20);
+            this.txtbPlaceOfBirth.TabIndex = 31;
+            // 
+            // lblPlaceOfBirth
+            // 
+            this.lblPlaceOfBirth.AutoSize = true;
+            this.lblPlaceOfBirth.Location = new System.Drawing.Point(238, 51);
+            this.lblPlaceOfBirth.Name = "lblPlaceOfBirth";
+            this.lblPlaceOfBirth.Size = new System.Drawing.Size(75, 13);
+            this.lblPlaceOfBirth.TabIndex = 37;
+            this.lblPlaceOfBirth.Text = "Place Of Birth:";
+            // 
+            // txtbCountryOfBirth
+            // 
+            this.txtbCountryOfBirth.Location = new System.Drawing.Point(323, 14);
+            this.txtbCountryOfBirth.Name = "txtbCountryOfBirth";
+            this.txtbCountryOfBirth.Size = new System.Drawing.Size(129, 20);
+            this.txtbCountryOfBirth.TabIndex = 29;
+            // 
+            // lblCountryOfBirth
+            // 
+            this.lblCountryOfBirth.AutoSize = true;
+            this.lblCountryOfBirth.Location = new System.Drawing.Point(238, 17);
+            this.lblCountryOfBirth.Name = "lblCountryOfBirth";
+            this.lblCountryOfBirth.Size = new System.Drawing.Size(84, 13);
+            this.lblCountryOfBirth.TabIndex = 36;
+            this.lblCountryOfBirth.Text = "Country Of Birth:";
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.Location = new System.Drawing.Point(95, 151);
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(129, 20);
+            this.txtbEmail.TabIndex = 23;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(10, 154);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 34;
+            this.lblEmail.Text = "Email:";
+            // 
+            // txtbPostalLine3
+            // 
+            this.txtbPostalLine3.Location = new System.Drawing.Point(95, 238);
+            this.txtbPostalLine3.Name = "txtbPostalLine3";
+            this.txtbPostalLine3.Size = new System.Drawing.Size(129, 20);
+            this.txtbPostalLine3.TabIndex = 28;
+            // 
+            // txtbPostalLine2
+            // 
+            this.txtbPostalLine2.Location = new System.Drawing.Point(95, 212);
+            this.txtbPostalLine2.Name = "txtbPostalLine2";
+            this.txtbPostalLine2.Size = new System.Drawing.Size(129, 20);
+            this.txtbPostalLine2.TabIndex = 27;
+            // 
+            // txtbPostalLine1
+            // 
+            this.txtbPostalLine1.Location = new System.Drawing.Point(95, 186);
+            this.txtbPostalLine1.Name = "txtbPostalLine1";
+            this.txtbPostalLine1.Size = new System.Drawing.Size(129, 20);
+            this.txtbPostalLine1.TabIndex = 25;
+            // 
+            // lblPostaAddress
+            // 
+            this.lblPostaAddress.AutoSize = true;
+            this.lblPostaAddress.Location = new System.Drawing.Point(10, 189);
+            this.lblPostaAddress.Name = "lblPostaAddress";
+            this.lblPostaAddress.Size = new System.Drawing.Size(80, 13);
+            this.lblPostaAddress.TabIndex = 30;
+            this.lblPostaAddress.Text = "Postal Address:";
+            // 
+            // txtbCell
+            // 
+            this.txtbCell.Location = new System.Drawing.Point(95, 116);
+            this.txtbCell.Name = "txtbCell";
+            this.txtbCell.Size = new System.Drawing.Size(129, 20);
+            this.txtbCell.TabIndex = 22;
+            // 
+            // lblCell
+            // 
+            this.lblCell.AutoSize = true;
+            this.lblCell.Location = new System.Drawing.Point(10, 119);
+            this.lblCell.Name = "lblCell";
+            this.lblCell.Size = new System.Drawing.Size(27, 13);
+            this.lblCell.TabIndex = 26;
+            this.lblCell.Text = "Cell:";
+            // 
+            // txtbWorkTell
+            // 
+            this.txtbWorkTell.Location = new System.Drawing.Point(95, 82);
+            this.txtbWorkTell.Name = "txtbWorkTell";
+            this.txtbWorkTell.Size = new System.Drawing.Size(129, 20);
+            this.txtbWorkTell.TabIndex = 20;
+            // 
+            // lblWorkTell
+            // 
+            this.lblWorkTell.AutoSize = true;
+            this.lblWorkTell.Location = new System.Drawing.Point(10, 85);
+            this.lblWorkTell.Name = "lblWorkTell";
+            this.lblWorkTell.Size = new System.Drawing.Size(56, 13);
+            this.lblWorkTell.TabIndex = 24;
+            this.lblWorkTell.Text = "Work Tell:";
+            // 
+            // txtbHomeTell
+            // 
+            this.txtbHomeTell.Location = new System.Drawing.Point(95, 48);
+            this.txtbHomeTell.Name = "txtbHomeTell";
+            this.txtbHomeTell.Size = new System.Drawing.Size(129, 20);
+            this.txtbHomeTell.TabIndex = 18;
+            // 
+            // lblHomeTell
+            // 
+            this.lblHomeTell.AutoSize = true;
+            this.lblHomeTell.Location = new System.Drawing.Point(10, 51);
+            this.lblHomeTell.Name = "lblHomeTell";
+            this.lblHomeTell.Size = new System.Drawing.Size(58, 13);
+            this.lblHomeTell.TabIndex = 21;
+            this.lblHomeTell.Text = "Home Tell:";
+            // 
+            // lblIdNo
+            // 
+            this.lblIdNo.AutoSize = true;
+            this.lblIdNo.Location = new System.Drawing.Point(7, 17);
+            this.lblIdNo.Name = "lblIdNo";
+            this.lblIdNo.Size = new System.Drawing.Size(61, 13);
+            this.lblIdNo.TabIndex = 19;
+            this.lblIdNo.Text = "ID Number:";
+            // 
+            // txtbIdNo
+            // 
+            this.txtbIdNo.Location = new System.Drawing.Point(95, 14);
+            this.txtbIdNo.Name = "txtbIdNo";
+            this.txtbIdNo.Size = new System.Drawing.Size(129, 20);
+            this.txtbIdNo.TabIndex = 17;
+            // 
             // lblNeedIdNo
             // 
             this.lblNeedIdNo.AutoSize = true;
@@ -466,6 +677,17 @@
             this.lblNeedIdNo.Size = new System.Drawing.Size(292, 13);
             this.lblNeedIdNo.TabIndex = 20;
             this.lblNeedIdNo.Text = "You need an ID Number before you can apply for a Passport";
+            // 
+            // lblYouAlrdyHavPass
+            // 
+            this.lblYouAlrdyHavPass.AutoSize = true;
+            this.lblYouAlrdyHavPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYouAlrdyHavPass.Location = new System.Drawing.Point(78, 116);
+            this.lblYouAlrdyHavPass.Name = "lblYouAlrdyHavPass";
+            this.lblYouAlrdyHavPass.Size = new System.Drawing.Size(324, 25);
+            this.lblYouAlrdyHavPass.TabIndex = 38;
+            this.lblYouAlrdyHavPass.Text = "You already have a Passport:";
+            this.lblYouAlrdyHavPass.Visible = false;
             // 
             // tpgDeathCert
             // 
@@ -511,6 +733,22 @@
             this.tpgDeathCert.Size = new System.Drawing.Size(523, 347);
             this.tpgDeathCert.TabIndex = 4;
             this.tpgDeathCert.Text = "Death Certificate";
+            // 
+            // lblCauseOfDeath
+            // 
+            this.lblCauseOfDeath.AutoSize = true;
+            this.lblCauseOfDeath.Location = new System.Drawing.Point(26, 267);
+            this.lblCauseOfDeath.Name = "lblCauseOfDeath";
+            this.lblCauseOfDeath.Size = new System.Drawing.Size(86, 13);
+            this.lblCauseOfDeath.TabIndex = 52;
+            this.lblCauseOfDeath.Text = "Cause Of Death:";
+            // 
+            // txtbCauseOfDeath
+            // 
+            this.txtbCauseOfDeath.Location = new System.Drawing.Point(136, 264);
+            this.txtbCauseOfDeath.Name = "txtbCauseOfDeath";
+            this.txtbCauseOfDeath.Size = new System.Drawing.Size(133, 20);
+            this.txtbCauseOfDeath.TabIndex = 9;
             // 
             // txtbApplicantResidentialLine3
             // 
@@ -789,9 +1027,34 @@
             // 
             // mnuItemFile
             // 
+            this.mnuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemClear,
+            this.mnuItemSubmit,
+            this.mnuItemViewDocument});
             this.mnuItemFile.Name = "mnuItemFile";
             this.mnuItemFile.Size = new System.Drawing.Size(37, 20);
             this.mnuItemFile.Text = "File";
+            // 
+            // mnuItemClear
+            // 
+            this.mnuItemClear.Name = "mnuItemClear";
+            this.mnuItemClear.Size = new System.Drawing.Size(158, 22);
+            this.mnuItemClear.Text = "Clear";
+            this.mnuItemClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // mnuItemSubmit
+            // 
+            this.mnuItemSubmit.Name = "mnuItemSubmit";
+            this.mnuItemSubmit.Size = new System.Drawing.Size(158, 22);
+            this.mnuItemSubmit.Text = "Submit";
+            this.mnuItemSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // mnuItemViewDocument
+            // 
+            this.mnuItemViewDocument.Name = "mnuItemViewDocument";
+            this.mnuItemViewDocument.Size = new System.Drawing.Size(158, 22);
+            this.mnuItemViewDocument.Text = "View Document";
+            this.mnuItemViewDocument.Click += new System.EventHandler(this.btnViewIdDoc_Click);
             // 
             // btnSubmit
             // 
@@ -824,241 +1087,7 @@
             this.btnViewIdDoc.Visible = false;
             this.btnViewIdDoc.Click += new System.EventHandler(this.btnViewIdDoc_Click);
             // 
-            // lblYouAlrdyHavPass
-            // 
-            this.lblYouAlrdyHavPass.AutoSize = true;
-            this.lblYouAlrdyHavPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYouAlrdyHavPass.Location = new System.Drawing.Point(78, 116);
-            this.lblYouAlrdyHavPass.Name = "lblYouAlrdyHavPass";
-            this.lblYouAlrdyHavPass.Size = new System.Drawing.Size(324, 25);
-            this.lblYouAlrdyHavPass.TabIndex = 38;
-            this.lblYouAlrdyHavPass.Text = "You already have a Passport:";
-            this.lblYouAlrdyHavPass.Visible = false;
-            // 
-            // pnlPassDetails
-            // 
-            this.pnlPassDetails.Controls.Add(this.pnlTandCs);
-            this.pnlPassDetails.Controls.Add(this.llblTandCs);
-            this.pnlPassDetails.Controls.Add(this.cbTandCs);
-            this.pnlPassDetails.Controls.Add(this.txtbPlaceOfBirth);
-            this.pnlPassDetails.Controls.Add(this.lblPlaceOfBirth);
-            this.pnlPassDetails.Controls.Add(this.txtbCountryOfBirth);
-            this.pnlPassDetails.Controls.Add(this.lblCountryOfBirth);
-            this.pnlPassDetails.Controls.Add(this.txtbEmail);
-            this.pnlPassDetails.Controls.Add(this.lblEmail);
-            this.pnlPassDetails.Controls.Add(this.txtbPostalLine3);
-            this.pnlPassDetails.Controls.Add(this.txtbPostalLine2);
-            this.pnlPassDetails.Controls.Add(this.txtbPostalLine1);
-            this.pnlPassDetails.Controls.Add(this.lblPostaAddress);
-            this.pnlPassDetails.Controls.Add(this.txtbCell);
-            this.pnlPassDetails.Controls.Add(this.lblCell);
-            this.pnlPassDetails.Controls.Add(this.txtbWorkTell);
-            this.pnlPassDetails.Controls.Add(this.lblWorkTell);
-            this.pnlPassDetails.Controls.Add(this.txtbHomeTell);
-            this.pnlPassDetails.Controls.Add(this.lblHomeTell);
-            this.pnlPassDetails.Controls.Add(this.lblIdNo);
-            this.pnlPassDetails.Controls.Add(this.txtbIdNo);
-            this.pnlPassDetails.Location = new System.Drawing.Point(0, 26);
-            this.pnlPassDetails.Name = "pnlPassDetails";
-            this.pnlPassDetails.Size = new System.Drawing.Size(523, 320);
-            this.pnlPassDetails.TabIndex = 39;
-            // 
-            // pnlTandCs
-            // 
-            this.pnlTandCs.Controls.Add(this.rtbTermAndConditions);
-            this.pnlTandCs.Location = new System.Drawing.Point(230, 108);
-            this.pnlTandCs.Name = "pnlTandCs";
-            this.pnlTandCs.Size = new System.Drawing.Size(285, 198);
-            this.pnlTandCs.TabIndex = 35;
-            // 
-            // rtbTermAndConditions
-            // 
-            this.rtbTermAndConditions.Enabled = false;
-            this.rtbTermAndConditions.Location = new System.Drawing.Point(4, 4);
-            this.rtbTermAndConditions.Name = "rtbTermAndConditions";
-            this.rtbTermAndConditions.Size = new System.Drawing.Size(278, 191);
-            this.rtbTermAndConditions.TabIndex = 0;
-            this.rtbTermAndConditions.Text = resources.GetString("rtbTermAndConditions.Text");
-            // 
-            // llblTandCs
-            // 
-            this.llblTandCs.AutoSize = true;
-            this.llblTandCs.Location = new System.Drawing.Point(342, 88);
-            this.llblTandCs.Name = "llblTandCs";
-            this.llblTandCs.Size = new System.Drawing.Size(109, 13);
-            this.llblTandCs.TabIndex = 33;
-            this.llblTandCs.TabStop = true;
-            this.llblTandCs.Text = "Terms and Conditions";
-            // 
-            // cbTandCs
-            // 
-            this.cbTandCs.AutoSize = true;
-            this.cbTandCs.Location = new System.Drawing.Point(246, 84);
-            this.cbTandCs.Name = "cbTandCs";
-            this.cbTandCs.Size = new System.Drawing.Size(100, 17);
-            this.cbTandCs.TabIndex = 32;
-            this.cbTandCs.Text = "I agree to these";
-            this.cbTandCs.UseVisualStyleBackColor = true;
-            // 
-            // txtbPlaceOfBirth
-            // 
-            this.txtbPlaceOfBirth.Location = new System.Drawing.Point(323, 48);
-            this.txtbPlaceOfBirth.Name = "txtbPlaceOfBirth";
-            this.txtbPlaceOfBirth.Size = new System.Drawing.Size(129, 20);
-            this.txtbPlaceOfBirth.TabIndex = 31;
-            // 
-            // lblPlaceOfBirth
-            // 
-            this.lblPlaceOfBirth.AutoSize = true;
-            this.lblPlaceOfBirth.Location = new System.Drawing.Point(238, 51);
-            this.lblPlaceOfBirth.Name = "lblPlaceOfBirth";
-            this.lblPlaceOfBirth.Size = new System.Drawing.Size(75, 13);
-            this.lblPlaceOfBirth.TabIndex = 37;
-            this.lblPlaceOfBirth.Text = "Place Of Birth:";
-            // 
-            // txtbCountryOfBirth
-            // 
-            this.txtbCountryOfBirth.Location = new System.Drawing.Point(323, 14);
-            this.txtbCountryOfBirth.Name = "txtbCountryOfBirth";
-            this.txtbCountryOfBirth.Size = new System.Drawing.Size(129, 20);
-            this.txtbCountryOfBirth.TabIndex = 29;
-            // 
-            // lblCountryOfBirth
-            // 
-            this.lblCountryOfBirth.AutoSize = true;
-            this.lblCountryOfBirth.Location = new System.Drawing.Point(238, 17);
-            this.lblCountryOfBirth.Name = "lblCountryOfBirth";
-            this.lblCountryOfBirth.Size = new System.Drawing.Size(84, 13);
-            this.lblCountryOfBirth.TabIndex = 36;
-            this.lblCountryOfBirth.Text = "Country Of Birth:";
-            // 
-            // txtbEmail
-            // 
-            this.txtbEmail.Location = new System.Drawing.Point(95, 151);
-            this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Size = new System.Drawing.Size(129, 20);
-            this.txtbEmail.TabIndex = 23;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(10, 154);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 34;
-            this.lblEmail.Text = "Email:";
-            // 
-            // txtbPostalLine3
-            // 
-            this.txtbPostalLine3.Location = new System.Drawing.Point(95, 238);
-            this.txtbPostalLine3.Name = "txtbPostalLine3";
-            this.txtbPostalLine3.Size = new System.Drawing.Size(129, 20);
-            this.txtbPostalLine3.TabIndex = 28;
-            // 
-            // txtbPostalLine2
-            // 
-            this.txtbPostalLine2.Location = new System.Drawing.Point(95, 212);
-            this.txtbPostalLine2.Name = "txtbPostalLine2";
-            this.txtbPostalLine2.Size = new System.Drawing.Size(129, 20);
-            this.txtbPostalLine2.TabIndex = 27;
-            // 
-            // txtbPostalLine1
-            // 
-            this.txtbPostalLine1.Location = new System.Drawing.Point(95, 186);
-            this.txtbPostalLine1.Name = "txtbPostalLine1";
-            this.txtbPostalLine1.Size = new System.Drawing.Size(129, 20);
-            this.txtbPostalLine1.TabIndex = 25;
-            // 
-            // lblPostaAddress
-            // 
-            this.lblPostaAddress.AutoSize = true;
-            this.lblPostaAddress.Location = new System.Drawing.Point(10, 189);
-            this.lblPostaAddress.Name = "lblPostaAddress";
-            this.lblPostaAddress.Size = new System.Drawing.Size(80, 13);
-            this.lblPostaAddress.TabIndex = 30;
-            this.lblPostaAddress.Text = "Postal Address:";
-            // 
-            // txtbCell
-            // 
-            this.txtbCell.Location = new System.Drawing.Point(95, 116);
-            this.txtbCell.Name = "txtbCell";
-            this.txtbCell.Size = new System.Drawing.Size(129, 20);
-            this.txtbCell.TabIndex = 22;
-            // 
-            // lblCell
-            // 
-            this.lblCell.AutoSize = true;
-            this.lblCell.Location = new System.Drawing.Point(10, 119);
-            this.lblCell.Name = "lblCell";
-            this.lblCell.Size = new System.Drawing.Size(27, 13);
-            this.lblCell.TabIndex = 26;
-            this.lblCell.Text = "Cell:";
-            // 
-            // txtbWorkTell
-            // 
-            this.txtbWorkTell.Location = new System.Drawing.Point(95, 82);
-            this.txtbWorkTell.Name = "txtbWorkTell";
-            this.txtbWorkTell.Size = new System.Drawing.Size(129, 20);
-            this.txtbWorkTell.TabIndex = 20;
-            // 
-            // lblWorkTell
-            // 
-            this.lblWorkTell.AutoSize = true;
-            this.lblWorkTell.Location = new System.Drawing.Point(10, 85);
-            this.lblWorkTell.Name = "lblWorkTell";
-            this.lblWorkTell.Size = new System.Drawing.Size(56, 13);
-            this.lblWorkTell.TabIndex = 24;
-            this.lblWorkTell.Text = "Work Tell:";
-            // 
-            // txtbHomeTell
-            // 
-            this.txtbHomeTell.Location = new System.Drawing.Point(95, 48);
-            this.txtbHomeTell.Name = "txtbHomeTell";
-            this.txtbHomeTell.Size = new System.Drawing.Size(129, 20);
-            this.txtbHomeTell.TabIndex = 18;
-            // 
-            // lblHomeTell
-            // 
-            this.lblHomeTell.AutoSize = true;
-            this.lblHomeTell.Location = new System.Drawing.Point(10, 51);
-            this.lblHomeTell.Name = "lblHomeTell";
-            this.lblHomeTell.Size = new System.Drawing.Size(58, 13);
-            this.lblHomeTell.TabIndex = 21;
-            this.lblHomeTell.Text = "Home Tell:";
-            // 
-            // lblIdNo
-            // 
-            this.lblIdNo.AutoSize = true;
-            this.lblIdNo.Location = new System.Drawing.Point(7, 17);
-            this.lblIdNo.Name = "lblIdNo";
-            this.lblIdNo.Size = new System.Drawing.Size(61, 13);
-            this.lblIdNo.TabIndex = 19;
-            this.lblIdNo.Text = "ID Number:";
-            // 
-            // txtbIdNo
-            // 
-            this.txtbIdNo.Location = new System.Drawing.Point(95, 14);
-            this.txtbIdNo.Name = "txtbIdNo";
-            this.txtbIdNo.Size = new System.Drawing.Size(129, 20);
-            this.txtbIdNo.TabIndex = 17;
-            // 
-            // txtbCauseOfDeath
-            // 
-            this.txtbCauseOfDeath.Location = new System.Drawing.Point(136, 264);
-            this.txtbCauseOfDeath.Name = "txtbCauseOfDeath";
-            this.txtbCauseOfDeath.Size = new System.Drawing.Size(133, 20);
-            this.txtbCauseOfDeath.TabIndex = 9;
-            // 
-            // lblCauseOfDeath
-            // 
-            this.lblCauseOfDeath.AutoSize = true;
-            this.lblCauseOfDeath.Location = new System.Drawing.Point(26, 267);
-            this.lblCauseOfDeath.Name = "lblCauseOfDeath";
-            this.lblCauseOfDeath.Size = new System.Drawing.Size(86, 13);
-            this.lblCauseOfDeath.TabIndex = 52;
-            this.lblCauseOfDeath.Text = "Cause Of Death:";
-            // 
-            // MainGUI
+            // frmHomeAffiarsMainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1069,8 +1098,9 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tctrlMenu);
             this.Controls.Add(this.mnuStripMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mnuStripMainMenu;
-            this.Name = "MainGUI";
+            this.Name = "frmHomeAffiarsMainGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.MainGUI_Load);
@@ -1087,13 +1117,13 @@
             this.pnlPartnerDetails.PerformLayout();
             this.tpgPassport.ResumeLayout(false);
             this.tpgPassport.PerformLayout();
+            this.pnlPassDetails.ResumeLayout(false);
+            this.pnlPassDetails.PerformLayout();
+            this.pnlTandCs.ResumeLayout(false);
             this.tpgDeathCert.ResumeLayout(false);
             this.tpgDeathCert.PerformLayout();
             this.mnuStripMainMenu.ResumeLayout(false);
             this.mnuStripMainMenu.PerformLayout();
-            this.pnlPassDetails.ResumeLayout(false);
-            this.pnlPassDetails.PerformLayout();
-            this.pnlTandCs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1198,6 +1228,9 @@
         private System.Windows.Forms.Label lblYouAlrdyHavPass;
         private System.Windows.Forms.Label lblCauseOfDeath;
         private System.Windows.Forms.TextBox txtbCauseOfDeath;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemClear;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemSubmit;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemViewDocument;
     }
 }
     
