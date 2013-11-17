@@ -129,6 +129,8 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnViewIdDoc = new System.Windows.Forms.Button();
+            this.mnuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemHelpF1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tctrlMenu.SuspendLayout();
             this.tpgIdDoc.SuspendLayout();
             this.pnlIdDetails.SuspendLayout();
@@ -664,6 +666,7 @@
             // 
             // txtbIdNo
             // 
+            this.txtbIdNo.Enabled = false;
             this.txtbIdNo.Location = new System.Drawing.Point(95, 14);
             this.txtbIdNo.Name = "txtbIdNo";
             this.txtbIdNo.Size = new System.Drawing.Size(129, 20);
@@ -1018,7 +1021,8 @@
             // mnuStripMainMenu
             // 
             this.mnuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuItemFile});
+            this.mnuItemFile,
+            this.mnuItemHelp});
             this.mnuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.mnuStripMainMenu.Name = "mnuStripMainMenu";
             this.mnuStripMainMenu.Size = new System.Drawing.Size(532, 24);
@@ -1086,6 +1090,22 @@
             this.btnViewIdDoc.UseVisualStyleBackColor = true;
             this.btnViewIdDoc.Visible = false;
             this.btnViewIdDoc.Click += new System.EventHandler(this.btnViewIdDoc_Click);
+            // 
+            // mnuItemHelp
+            // 
+            this.mnuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemHelpF1});
+            this.mnuItemHelp.Name = "mnuItemHelp";
+            this.mnuItemHelp.Size = new System.Drawing.Size(44, 20);
+            this.mnuItemHelp.Text = "Help";
+            // 
+            // mnuItemHelpF1
+            // 
+            this.mnuItemHelpF1.Name = "mnuItemHelpF1";
+            this.mnuItemHelpF1.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.mnuItemHelpF1.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemHelpF1.Text = "Help";
+            this.mnuItemHelpF1.Click += new System.EventHandler(this.mnuItemHelpF1_Click);
             // 
             // frmHomeAffiarsMainGUI
             // 
@@ -1231,6 +1251,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemClear;
         private System.Windows.Forms.ToolStripMenuItem mnuItemSubmit;
         private System.Windows.Forms.ToolStripMenuItem mnuItemViewDocument;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemHelpF1;
     }
 }
     

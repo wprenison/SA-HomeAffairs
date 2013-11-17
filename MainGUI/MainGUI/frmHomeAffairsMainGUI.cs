@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace MainGUI
 {
@@ -535,6 +536,11 @@ namespace MainGUI
                 btnViewIdDoc.Hide();
                 MessageBox.Show("Sorry this function is not available for a death certificate.");
             }
+        }
+
+        private void mnuItemHelpF1_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"..\..\..\Documentation\Home Affairs User Manual.docx"); 
         }
 
     }
