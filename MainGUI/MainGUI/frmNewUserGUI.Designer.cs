@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewUserGUI));
             this.lblFName = new System.Windows.Forms.Label();
             this.txtbFirstNames = new System.Windows.Forms.TextBox();
             this.lblLName = new System.Windows.Forms.Label();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.txtbFirstNames);
             this.Controls.Add(this.lblFName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNewUserGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New User";

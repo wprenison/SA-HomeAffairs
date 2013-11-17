@@ -180,6 +180,7 @@
             this.Controls.Add(this.txtbPassDisplaySurname);
             this.Controls.Add(this.txtbPassDisplayName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPassportDocumentDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassportDocumentDisplay";
